@@ -33,12 +33,12 @@ module Sort#(
 	assign GPIO[1] = push_clk;
 	
 	always @(negedge rst) begin
-		data_in[0]  = 8'b00001001;
-		data_in[1]  = 8'b00000001;
+		data_in[0]  = SW[3:0];//8'b00001001;
+		data_in[1]  = SW[7:4];
 		data_in[2]  = 8'b00000101;
 		data_in[3]  = 8'b00000010;
 		data_in[4]  = 8'b00000011;
-		data_in[5]  = 8'b00000100;
+		data_in[5]  = 8'b00000001;
 		data_in[6]  = 8'b00000110;
 		data_in[7]  = 8'b00000111;
 		data_in[8]  = 8'b00000000;
